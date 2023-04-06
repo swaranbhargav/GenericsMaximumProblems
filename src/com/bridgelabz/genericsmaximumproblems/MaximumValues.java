@@ -2,8 +2,8 @@ package com.bridgelabz.genericsmaximumproblems;
 
 public class MaximumValues {
 
-	public static String findMax(String a, String b, String c) {
-		String max = a;
+	public static <T extends Comparable<T>> T findMax(T a, T b, T c) {
+		T max = a;
 		if (b.compareTo(max) > 0) {
 			max = b;
 		}
@@ -19,12 +19,12 @@ public class MaximumValues {
 		String max1 = findMax(a1, b1, c1);
 		System.out.println("Max of " + a1 + ", " + b1 + ", " + c1 + " is " + max1);
 
-		String a2 = "elephant", b2 = "tiger", c2 = "lion";
-		String max2 = findMax(a2, b2, c2);
+		Float a2 = 3.5f, b2 = 5.2f, c2 = 2.8f;
+		Float max2 = findMax(a2, b2, c2);
 		System.out.println("Max of " + a2 + ", " + b2 + ", " + c2 + " is " + max2);
 
-		String a3 = "pear", b3 = "apple", c3 = "banana";
-		String max3 = findMax(a3, b3, c3);
+		Integer a3 = 10, b3 = 5, c3 = 20;
+		Integer max3 = findMax(a3, b3, c3);
 		System.out.println("Max of " + a3 + ", " + b3 + ", " + c3 + " is " + max3);
 	}
 
